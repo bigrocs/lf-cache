@@ -1,10 +1,10 @@
 import localForage from 'localforage'
 
 //从缓存中获取数据
-export const get = (key) => {
+export const get = (key, defaults = false) => {
   return new Promise((resolve, reject) => {
       localForage.getItem(key).then((value) => {
-        let data = false
+        let data = defaults
         if (value) {
           if (value.minutes > new Date().getTime() || value.minutes == 0) {
             data = value.data
@@ -17,9 +17,11 @@ export const get = (key) => {
   })
 }
 
-// get 别名
+// 获取和删除
 export const pull = (key) => {
-  return get(key)
+  let value = get(key)
+  remove(key)
+  return value
 }
 
 // 设置缓存
