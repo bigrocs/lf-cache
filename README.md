@@ -20,6 +20,7 @@ Lf-cache 是一个简洁的通过 localForage 实现前端缓存的 js 扩展包
 
 ```shell
 npm install lf-cache
+yarn add lf-cache
 ```
 
 ### 2. 扩展包使用
