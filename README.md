@@ -79,7 +79,7 @@ Cache.pull('key')
 #### 在缓存中存储数据
 
 你可以使用 Cache 的 put 方法来将数据存储到缓存中。当你在缓存中存放数据时，你需要使用第三个参数来设定缓存的过期时间：
-别名： set add
+别名: set、add
 
 ```
 Cache.put('key', 'value', minutes)
@@ -96,6 +96,7 @@ Cache.forever('key', 'value')
 #### 删除缓存中的数据
 
 你可以使用 forget 方法从缓存中删除数据：
+别名: remove、deleter
 
 ```
 Cache.forget('key')
