@@ -82,7 +82,7 @@ Cache.pull('key')
 别名： set add
 
 ```
-Cache.pull('key', 'value', minutes)
+Cache.put('key', 'value', minutes)
 ```
 
 #### 数据永久存储
