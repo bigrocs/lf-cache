@@ -11,8 +11,10 @@
     "url": "git+https://github.com/bigrocs/lf-cache.git"
   },
   "keywords": [
-    "vue",
-    "builder"
+    "cache",
+    "lf-cache",
+    "localforage",
+    "localstorage"
   ],
   "dependencies": {
     "localforage": "^1.7.1"
