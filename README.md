@@ -25,7 +25,7 @@ npm install lf-cache
 #### 2. 扩展包使用
 
 ```
-import * as Cache from 'lf-cache'
+import Cache from 'lf-cache'
 
 Cache.get('key')
 ```
