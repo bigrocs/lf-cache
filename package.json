@@ -1,0 +1,30 @@
+{
+  "name": "json-vue",
+  "version": "1.0.1",
+  "description": "自动构建 vue 页面\"",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laracore/json-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "builder"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "font-awesome": "^4.7.0",
+    "localforage": "^1.7.1",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
+  },
+  "author": "bigRcos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laracore/json-vue/issues"
+  },
+  "homepage": "https://github.com/laracore/json-vue#readme"
+}
