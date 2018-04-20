@@ -29,7 +29,10 @@ Cache = {
     Cache.remove(key)
     return value
   },
-  set: (key, value, minutes = 0) => {
+  set: async (key, value, minutes = 0) => {
+    if (typeof value === 'function') {
+        value = await value()
+    }
     return new Promise((resolve, reject) => {
         localForage.setItem(key, {
           data: value,

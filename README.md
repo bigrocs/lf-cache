@@ -62,6 +62,15 @@ Cache.remember('key', 'value' ,minutes)
 缓存时间为 minutes 默认0分钟，表示永久缓存。
 如果缓存中不存在你想找的数据，则传递给 set 方法 value 值放置在缓存中。
 
+vulue 支持传入闭包函数，你也可以传入一个异步闭包函数，Cache 会自动等待异步函数执行完成后写入缓存
+```
+Cache.remember('key', async () => {
+  let response = await axios.get(url)
+  return response.data
+} , minutes)
+```
+
+
 你还可以使用 rememberForever 方法从缓存中查找数据或永久存储它：
 
 ```
@@ -79,7 +88,8 @@ Cache.pull('key')
 #### 在缓存中存储数据
 
 你可以使用 Cache 的 put 方法来将数据存储到缓存中。当你在缓存中存放数据时，你需要使用第三个参数来设定缓存的过期时间：
-别名: set、add
+别名： set add
+vulue 支持传入闭包函数，详情参照 remember 方法
 
 ```
 Cache.put('key', 'value', minutes)
@@ -96,7 +106,6 @@ Cache.forever('key', 'value')
 #### 删除缓存中的数据
 
 你可以使用 forget 方法从缓存中删除数据：
-别名: remove、deleter
 
 ```
 Cache.forget('key')
