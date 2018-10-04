@@ -1,6 +1,6 @@
 {
   "name": "lf-cache",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "基于 localForage 制作的前端缓存系统",
   "main": "./src/index.js",
   "scripts": {
