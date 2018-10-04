@@ -8,7 +8,7 @@ const expiryTime = (minutes) => {
   }
 }
 
-Cache = {
+export default {
   get: (key, defaults = false) => {
     return new Promise((resolve, reject) => {
         localForage.getItem(key).then((value) => {
@@ -110,4 +110,3 @@ Cache = {
     })
   }
 }
-export default Cache
